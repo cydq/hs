@@ -31,7 +31,7 @@ export default function Home(props: Props) {
     userSelect: 'none'
   }}>
     <Head>
-      <title>Homestuck</title>
+      <title>Arct's HS</title>
 
       <meta name="title" content="Arct's Homestuck Progress" />
       <meta name="description" content={`I'm reading Homestuck! Currently on page ${props.page}.`} />
