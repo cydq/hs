@@ -1,0 +1,100 @@
+{
+  "length": 8122,
+
+  "acts": [
+    {
+      "name": "Act 1",
+      "length": 247
+    },
+    {
+      "name": "Act 2",
+      "length": 511
+    },
+    {
+      "name": "Act 3",
+      "length": 395
+    },
+    {
+      "name": "Intermission 1",
+      "length": 204
+    },
+    {
+      "name": "Act 4",
+      "length": 631
+    },
+    {
+      "name": "Act 5",
+      "length": 2119,
+
+      "sub": [
+        {
+          "name": "Act 5 Act 1",
+          "length": 636
+        },
+        {
+          "name": "Act 5 Act 2",
+          "length": 1483
+        }
+      ]
+    },
+    {
+      "name": "Intermission 2",
+      "length": 2119
+    },
+    {
+      "name": "Act 6",
+      "length": 2119,
+
+      "sub": [
+        {
+          "name": "Act 6 Act 1",
+          "length": 182
+        },
+        {
+          "name": "Act 6 Intermission 1",
+          "length": 125
+        },
+        {
+          "name": "Act 6 Act 2",
+          "length": 247
+        },
+        {
+          "name": "Act 6 Intermission 2",
+          "length": 153
+        },
+        {
+          "name": "Act 6 Act 3",
+          "length": 443
+        },
+        {
+          "name": "Act 6 Intermission 3",
+          "length": 175
+        },
+        {
+          "name": "Act 6 Act 4",
+          "length": 3
+        },
+        {
+          "name": "Act 6 Intermission 4",
+          "length": 71
+        },
+        {
+          "name": "Act 6 Act 5",
+          "length": 415
+        },
+        {
+          "name": "Act 6 Intermission 5",
+          "length": 316
+        },
+        {
+          "name": "Act 6 Act 6",
+          "length": 1880
+        }
+      ]
+    },
+    {
+      "name": "Act 7",
+      "length": 2119
+    }
+  ]
+}
