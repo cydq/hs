@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Head from 'next/head'
+
 import axios from 'axios'
 import { motion } from 'framer-motion'
 import ProgressBar from 'react-bootstrap/ProgressBar'
@@ -28,6 +30,18 @@ export default function Home(props: Props) {
     padding: '4em',
     userSelect: 'none'
   }}>
+    <Head>
+      <title>Homestuck</title>
+
+      <meta name="title" content="Arct's Homestuck Progress" />
+      <meta name="description" content={`I'm reading Homestuck! Currently on page ${props.page}.`} />
+
+      <meta property="og:title" content="Arct's Homestuck Progress" />
+      <meta property="og:description" content={`I'm reading Homestuck! Currently on page ${props.page}.`} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://hs.arct.io/" />
+      <meta property="og:image" content="https://hs.arct.io/favicon.png" />
+    </Head>
 
     <h1>I'm Reading <a href="https://homestuck.com/">Homestuck</a></h1>
 
