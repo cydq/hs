@@ -1,5 +1,6 @@
 import React from 'react'
 
+import axios from 'axios'
 import { motion } from 'framer-motion'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 
@@ -30,10 +31,10 @@ export default function Home(props: Props) {
 
     <h1>I'm Reading <a href="https://homestuck.com/">Homestuck</a></h1>
 
-    <h4>Current Page: <a href={`https://homestuck.com/story/${props.page}`} target="_blank">{props.page}</a><sup><a href="https://github.com/arktfox/hs" target="_blank" style={{ fontSize: 12 }}>🔧</a></sup></h4>
+    <h4>Current Page: <a href={`https://homestuck.com/story/${props.page}`} target="_blank">{props.page}</a><sup><a href="https://gist.github.com/arktfox/717713ca16ae584e70668b379c6ae089/edit" target="_blank" style={{ fontSize: 12 }}>🔧</a></sup></h4>
 
     <h3 style={{ marginTop: '1em' }}>Progress</h3>
-    {props.progress.map(act =><>
+    {props.progress.map((act, i) =><div key={i}>
         <div className="row" style={{ width: '32em' }}>
           <div className="col">
             <span>{act.name}</span>
@@ -46,7 +47,7 @@ export default function Home(props: Props) {
         </div>
 
         {act.sub.map((act, i) =>
-          <div className="row" style={{ width: '32em' }} key={i + 1}>
+          <div className="row" style={{ width: '32em' }} key={i}>
             <div className="col">
               <span style={{ marginLeft: '2em' }}>{act.name}</span>
             </div>
@@ -57,14 +58,14 @@ export default function Home(props: Props) {
             </div>
           </div>
         )}
-      </>
+      </div>
     )}
 
     <h3 style={{ marginTop: '1em' }}>Overall Progress: {`${(100 * props.page / length).toFixed(1)}%`}</h3>
     <div style={{ paddingBottom: '10px', width: '32em' }}>
       <ProgressBar style={{ height: '20px' }}>
         {props.progress.map((act, i) =>
-          <ProgressBar variant={act.progress >= 100 ? "success" : "info"} animated={act.progress < 100} now={act.progress * act.length / length} label={act.progress >= 100 ? `${act.short}` : `${act.progress.toFixed(1)}%`} key={i + 1} />
+          <ProgressBar variant={act.progress >= 100 ? "success" : "info"} animated={act.progress < 100} now={act.progress * act.length / length} label={act.progress >= 100 ? `${act.short}` : `${act.progress.toFixed(1)}%`} key={i} />
         )}
       </ProgressBar>
     </div>
@@ -72,7 +73,8 @@ export default function Home(props: Props) {
 }
 
 export async function getServerSideProps(ctx: any) {
-  const page = parseInt(ctx.query.p)
+  const { data } = await axios.get('https://gist.githubusercontent.com/arktfox/717713ca16ae584e70668b379c6ae089/raw/hs.json')
+  const { page } = data
 
   return {
     props: {
