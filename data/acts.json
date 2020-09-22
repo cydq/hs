@@ -39,11 +39,11 @@
     },
     {
       "name": "Intermission 2",
-      "length": 2119
+      "length": 2
     },
     {
       "name": "Act 6",
-      "length": 2119,
+      "length": 4010,
 
       "sub": [
         {
@@ -94,7 +94,7 @@
     },
     {
       "name": "Act 7",
-      "length": 2119
+      "length": 3
     }
   ]
 }
