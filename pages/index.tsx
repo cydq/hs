@@ -87,7 +87,7 @@ export default function Home(props: Props) {
 }
 
 export async function getServerSideProps(ctx: any) {
-  const { data } = await axios.get('https://gist.githubusercontent.com/arktfox/717713ca16ae584e70668b379c6ae089/raw/hs.json')
+  const { data } = await axios.get('https://gist.githubusercontent.com/aeuu/717713ca16ae584e70668b379c6ae089/raw/hs.json')
   const { page } = data
 
   return {
