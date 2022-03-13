@@ -45,7 +45,7 @@ export default function Home(props: Props) {
 
     <h1>I'm Reading <a href="https://homestuck.com/">Homestuck</a></h1>
 
-    <h4>Current Page: <a href={`https://homestuck.com/story/${props.page}`} target="_blank">{props.page}</a><sup><a href="https://gist.github.com/arktfox/717713ca16ae584e70668b379c6ae089/edit" target="_blank" style={{ fontSize: 12 }}>🔧</a></sup></h4>
+    <h4>Current Page: <a href={`https://homestuck.com/story/${props.page}`} target="_blank">{props.page}</a><sup><a href="https://gist.github.com/aeuu/717713ca16ae584e70668b379c6ae089/edit" target="_blank" style={{ fontSize: 12 }}>🔧</a></sup></h4>
 
     <h3 style={{ marginTop: '1em' }}>Progress</h3>
     {props.progress.map((act, i) =><div key={i}>
